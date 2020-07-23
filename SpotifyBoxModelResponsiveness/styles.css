@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  html {
+    font-size: 18px;
+  }
+  
+  img {
+    width: 250px;
+  }
+  
+  nav {
+    height: 100px;
+    width: 100vw;
+    padding: 15px 25px;
+    background-color: #e7e2e2;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  ul {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  li {
+    list-style: none;
+    font-size: 1rem;
+  }
+  
+  li + li {
+    margin-left: 25px;
+  }
+  
+  a {
+    display: block;
+    color: #1a1818;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #1ed760;
+    transition: color 0.5s;
+  }
+  
+  /* Interaction 1: for screens lower than 800px
+  Characteristics:
+  Remove Spotify logo
+  Nav-bar height remains the same
+  Links  font-size remains the same
+  Links equally distributed along Nav-bar’s width */
+  
+  @media (max-width: 800px) {
+    img {
+      display: none;
+      /* width: 0; */
+    }
+    ul {
+      justify-content: space-evenly;
+    }
+  }
+  
+  /* Interaction 2: for screens lower than 600px
+  Characteristics:
+  Links vertically aligned
+  White border between each link of 1.5px
+  Links  font-size adjustment to 16px
+  Padding Top and Bottom for Links: 15px    
+  New Hover effect for links:
+  Background color becomes green (#1ed760)
+  Font color becomes white */
+  
+  @media (max-width: 600px) {
+    nav {
+      height: auto;
+      padding: 0;
+    }
+    img {
+      width: 0;
+    }
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    li {
+      font-size: 16px;
+      /* padding: 15px 0; */
+      margin: 0;
+      width: 100%;
+      text-align: center;
+    }
+    li + li {
+      margin: 0;
+    }
+    a {
+      padding: 15px 0;
+      border: white solid 1.5px;
+    }
+    a:hover {
+      color: white;
+      background-color: #1ed760;
+      transition: background-color 0.5s, color: 0.5s;
+    }
+  }
+  
